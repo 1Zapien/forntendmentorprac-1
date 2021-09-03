@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+/*neutral colors*/
+/*typography*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card, .card__logo, #billForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background: #c5e4e7;
+}
+
+.card {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.card__logo {
+  height: 250px;
+  width: 100%;
+}
+
+#billForm {
+  background: white;
+  border-radius: 25px;
+  padding: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #5e7a7d;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.split {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#fillForm {
+  width: 100%;
+  height: 90%;
+}
+
+#totals {
+  width: 100%;
+  background: var(--neutral-dark);
+  height: 90%;
+  border-radius: 25px;
+}
+
+@media only screen and (min-width: 500px) {
+  #billForm {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
