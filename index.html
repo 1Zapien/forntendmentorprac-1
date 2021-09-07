@@ -23,7 +23,7 @@
       <div id="billForm">
           <div role="form" class= "split" id="fillForm">
             <label for="bill" >Bill</label><br>
-            <input type="number" id="Bill" value="0"><br>
+            <input type="number" id="bill" value="0"><br>
             <div id="selectTip">
               <p>Select Tip %</p>
               <input name="tipPercent"
@@ -50,23 +50,27 @@
           <input type="number" id="numberPeople" value="0"> 
           </div>
           
-          <div id="totals" class= "split">
-            <div type="pre">
-              <pre>
-              Tip Amount
-              / person
-              </pre>
-              <div id="tipAmount">
+          <div id="card__sums" class= "split">
+            <div class="card__totals">
+              <div class="card__amount">
+                <b>Tip Amount</b>
+                <p>/person</p>
+              </div>
+              <div class="card__per">
                   $0.00
                 </div>
             </div>
-              <pre>
-              Total
-              / person
-              </pre>
-              <div id="totalPerson">
-                $0.00
+
+            <div class="card__totals">
+              <div class="card__amount">
+                <b>Total</b>
+                <p>/person</p>
+            </div>
+              <div class="card__per">
+                  $0.00
               </div>
+            </div>
+            
             <button id="reset">Reset</button>
           </div>
         </div>
