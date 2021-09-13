@@ -41,8 +41,10 @@
     background-color: $light_grey;
     border-radius: 10px;
     font-size: 18px;
-    margin-bottom: 1rem;
-  }
+    margin-bottom: 2rem;
+    text-align: right;
+    padding: 1rem;
+}
   
 
 
@@ -56,10 +58,11 @@ body{
 .card{
     @extend %flex-center;
     flex-direction: row;
+    min-width: 350px;
 }
 
 input, button, submit{
-  border:none;
+    border:none;
 }
 
 .card__logo{
@@ -73,13 +76,14 @@ input, button, submit{
 #billForm{
     background: white;
     border-radius: 25px;
-    padding: 1rem;
+    padding: 2rem;
     height:fit-content;
     color: $neutral-gray;
     @extend %flex-center;
     flex-direction: column;
     
 }
+
 
 .split{
     width: 100%;
@@ -93,13 +97,65 @@ input, button, submit{
     align-self: center;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
 input#bill{
     @extend %input-design;
+    background-image: url("images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
 }
 
 input#numberPeople{
     @extend %input-design;
+    background-image: url("images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
 }
+
+#selectTip{
+
+ input[type ="radio"]{
+    display: none;
+    width: 40px;
+
+    }
+    label, input{
+        position: relative;
+        display: inline-block;
+        font-size: $font-form;
+        /*border: 2px solid $primary-color;*/
+        width: 135px;
+        text-align: center;
+        border-radius: 5px;
+        margin: .5rem 0rem;
+        background-color: $neutral-dark;
+        color: white;
+    }
+
+
+    input[type="radio"]:checked + label{
+        background-color:$primary-color;
+        color: $neutral-dark;
+    }
+}
+
+
+
 
 
 
@@ -143,6 +199,9 @@ input#numberPeople{
     background-color: $primary-color;
     margin: 1rem;
     align-self: center;
+    font-family: $font-stack;
+    font-size: $font-form;
+    color: $neutral-dark;
 }
 
 
@@ -156,8 +215,24 @@ input#numberPeople{
 
 
 
-@media only screen and (min-width: 550px){
+@media only screen and (min-width: 650px){
+
     #billForm{
+        width: 1100px;
         flex-direction: row;
+        padding: 2rem;
+    }
+
+
+    %input-design{
+        width: 90%;
+    }
+
+    #card__sums{
+        height:400px;
+    }
+
+    #reset{
+        margin-top:7rem;
     }
 }

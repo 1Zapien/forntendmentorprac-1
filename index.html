@@ -21,34 +21,34 @@
 
 
       <div id="billForm">
-          <div role="form" class= "split" id="fillForm">
+          <form role="form" class= "split" id="fillForm">
             <label for="bill" >Bill</label><br>
-            <input type="number" id="bill" value="0"><br>
+            <input type="number" id="bill" placeholder="0"><br>
             <div id="selectTip">
               <p>Select Tip %</p>
               <input name="tipPercent"
               type="radio" value="5" id="five">
-              <label for="five">5</label>
+              <label for="five">5%</label>
               <input name="tipPercent"
               type="radio" value="10" id="ten">
-              <label for="ten">10</label>
+              <label for="ten">10%</label>
               <input name="tipPercent"
               type="radio" value="15" id="fifteen">
-              <label for="fifteen">15</label>
+              <label for="fifteen">15%</label>
               <input name="tipPercent"
               type="radio" value="25" id="twentyFive">
-              <label for="twentyFive">25</label>
+              <label for="twentyFive">25%</label>
               <input name="tipPercent"
               type="radio" value="50" id="fifty">
-              <label for="fifty">50</label>
+              <label for="fifty">50%</label>
               <input name="tipPercent"
-              type="radio" value="custom"><input type="number" id="custom" value="0" placeholder="Custom"></option>
+              type="radio" value="custom"><input for="custom" type="number" placeholder="Custom"></input>
       
               <br>
           </div>
           <label for="numberPeople" >Number of People</label><br>
-          <input type="number" id="numberPeople" value="0"> 
-          </div>
+          <input type="number" id="numberPeople" placeholder="0"> 
+        </form>
           
           <div id="card__sums" class= "split">
             <div class="card__totals">
@@ -71,11 +71,13 @@
               </div>
             </div>
             
-            <button id="reset">Reset</button>
+            <input type="reset" id="reset" form="fillForm"></input>
           </div>
         </div>
       
       </div> 
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
