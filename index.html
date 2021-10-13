@@ -28,21 +28,21 @@
               <p>Select Tip %</p>
               <input name="tipPercent"
               type="radio" value="5" id="five">
-              <label for="five">5%</label>
+              <label for="five" class="tip__value">5%</label>
               <input name="tipPercent"
-              type="radio" value="10" id="ten">
-              <label for="ten">10%</label>
+              type="radio" value="10" id="ten" >
+              <label for="ten" class="tip__value">10%</label>
               <input name="tipPercent"
               type="radio" value="15" id="fifteen">
-              <label for="fifteen">15%</label>
+              <label for="fifteen"class="tip__value">15%</label>
               <input name="tipPercent"
               type="radio" value="25" id="twentyFive">
-              <label for="twentyFive">25%</label>
+              <label for="twentyFive" class="tip__value">25%</label>
               <input name="tipPercent"
-              type="radio" value="50" id="fifty">
-              <label for="fifty">50%</label>
-              <input name="tipPercent"
-              type="radio" value="custom"><input for="custom" type="number" placeholder="Custom"></input>
+              type="radio" value="50" id="fifty" >
+              <label for="fifty" class="tip__value">50%</label>
+              <input name="tipPercent" 
+              type="radio" value="custom" id="custom" ><input id="custom__input"  for="custom" type="number" placeholder="Custom" class="tip__value">
       
               <br>
           </div>
@@ -56,7 +56,7 @@
                 <b>Tip Amount</b>
                 <p>/person</p>
               </div>
-              <div class="card__per">
+              <div  id="card__tip" class="card__per">
                   $0.00
                 </div>
             </div>
@@ -66,7 +66,7 @@
                 <b>Total</b>
                 <p>/person</p>
             </div>
-              <div class="card__per">
+              <div id="card__each" class="card__per">
                   $0.00
               </div>
             </div>

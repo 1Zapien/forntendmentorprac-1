@@ -128,17 +128,29 @@ input#numberPeople{
 }
 
 #selectTip{
+    
+    padding-bottom: 1rem;
 
- input[type ="radio"]{
-    display: none;
-    width: 40px;
+    
+    input[type ="radio"]{
+        display: none;
+        width: 40px;
 
     }
-    label, input{
+    input[type ="number"]{
+        width:135px;
+        background-color: white ;
+        color: $neutral-dark;
+        margin: .5rem 0rem;
+
+
+    }
+    
+
+    label,input{
         position: relative;
         display: inline-block;
         font-size: $font-form;
-        /*border: 2px solid $primary-color;*/
         width: 135px;
         text-align: center;
         border-radius: 5px;
@@ -148,11 +160,21 @@ input#numberPeople{
     }
 
 
-    input[type="radio"]:checked + label{
+    input[type="radio"]:checked+label{
         background-color:$primary-color;
         color: $neutral-dark;
     }
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -234,5 +256,9 @@ input#numberPeople{
 
     #reset{
         margin-top:7rem;
+    }
+
+    #selectTip{
+        padding-bottom:2rem;
     }
 }
