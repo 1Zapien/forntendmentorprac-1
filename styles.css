@@ -31,6 +31,9 @@ input#bill, input#numberPeople {
   margin-bottom: 2rem;
   text-align: right;
   padding: 1rem;
+  font-family: "Space Mono", monospace;
+  color: #00494d;
+  font-weight: 700;
 }
 
 body {
@@ -51,7 +54,7 @@ input, button, submit {
 }
 
 .card__logo {
-  height: 250px;
+  height: 200px;
   width: 100%;
 }
 
@@ -124,9 +127,10 @@ input#numberPeople {
 
 #selectTip input[type="number"] {
   width: 135px;
-  background-color: white;
-  color: #00494d;
+  background-color: #f4fafa;
+  color: #5e7a7d;
   margin: .5rem 0rem;
+  padding: .25rem;
 }
 
 #selectTip label, #selectTip input {
@@ -208,9 +212,13 @@ input#numberPeople {
   color: #00494d;
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 800px) {
+  .card__logo {
+    margin-top: 3rem;
+    height: 250;
+  }
   #billForm {
-    width: 1100px;
+    max-width: 1000px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
