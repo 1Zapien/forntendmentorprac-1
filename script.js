@@ -1,7 +1,7 @@
 "use strict";
 
 const form = document.getElementById("fillForm");
-const reset = document.getElementById("reset");
+const reset = document.getElementById("resetBtn");
 
 const bill = document.getElementById("bill");
 const people = document.getElementById("numberPeople");
@@ -14,6 +14,7 @@ const custom = document.getElementById("custom");
 const tip__values = document.getElementsByClassName("tip__value");
 
 const tip__Names = document.getElementsByName("tipPercent");
+const alert = document.getElementsByClassName("alert");
 
 
 var percent = 0;
@@ -75,24 +76,32 @@ let selectedTip =(value)=>{
 let Update = ()=>{
     let totalEach = 0;
     let tipAmount = 0;
-    let price = parseInt(bill.value);
+    let price = parseFloat(bill.value);
     let persons = parseInt(people.value);
 
-    if(!people.value || !bill.value){
-        if(!people.value){
-            console.log("people must be more than 1");
-        }else{
-            console.log("bill must be more than 1");
-        }
 
-    }else{
+    if(!persons  || persons == 0 ){
+            alert[1].style.visibility = "visible";
+    }else if (!price || price < 0){
+            alert[0].style.visibility = "visible";
 
+ 
+    }
+    else{
+        alert[1].style.visibility = "hidden";
+        alert[0].style.visibility = "hidden";
 
 
         tipAmount = (price*percent)/persons;
+        console.log("this is price" +  price);
+        console.log("this is percent" +  percent);
+        console.log("this is tip not rounded" +  tipAmount);
+
+
         totalEach = ((price*percent)+price)/persons;
         tipTotal.textContent = currencyRound(tipAmount)
         eachTotal.textContent = currencyRound(totalEach);
+        document. getElementById("resetBtn"). disabled = false;
 
     }
     
@@ -104,6 +113,9 @@ let Update = ()=>{
 reset.addEventListener('click', ()=>{
     tipTotal.textContent =  "$0.00";
     eachTotal.textContent =  "$0.00";
+    alert[1].style.visibility = "hidden";
+    alert[0].style.visibility = "hidden";
+    document. getElementById("reset"). disabled = true;
    
 });
 

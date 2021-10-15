@@ -134,6 +134,7 @@ input#numberPeople{
 #selectTip{
     
     padding-bottom: 1rem;
+    max-width: 90%;
 
     
     input[type ="radio"]{
@@ -142,7 +143,7 @@ input#numberPeople{
 
     }
     input[type ="number"]{
-        width:135px;
+        width:115px;
         background-color: $light_grey;
         color: $neutral-gray;
         margin: .5rem 0rem;
@@ -156,7 +157,7 @@ input#numberPeople{
         position: relative;
         display: inline-block;
         font-size: $font-form;
-        width: 135px;
+        width: 115px;
         text-align: center;
         border-radius: 5px;
         margin: .5rem 0rem;
@@ -171,6 +172,22 @@ input#numberPeople{
     }
 
 
+}
+
+
+label{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    p{
+        display: inline-block;
+
+        + .alert{
+            color: red;
+            visibility: hidden;
+         }
+
+    }
 }
 
 
@@ -199,11 +216,11 @@ input#numberPeople{
 
 
 .card__totals{
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row;
    justify-content: space-between;
-   margin: 1rem 0rem;
+   margin: 2rem 0rem;
    align-self: center;
 }
 
@@ -214,22 +231,31 @@ input#numberPeople{
 .card__per{
     color: $primary-color;
     align-self: center;
-    font-size: $font-form;
+    font-size: 35px;
 }
 
 
 
-#reset{
-    height: 50px;
-    width: 80%;
-    border-radius: 10px;
-    background-color: $primary-color;
-    margin: 1rem;
-    align-self: center;
-    font-family: $font-stack;
-    font-size: $font-form;
-    color: $neutral-dark;
+input{
+    &#resetBtn{
+        height: 50px;
+        width: 80%;
+        border-radius: 10px;
+        background-color: $primary-color;
+        margin: 1rem;
+        align-self: center;
+        font-family: $font-stack;
+        font-size: $font-form;
+        color: $neutral-dark;
+    }
+    &:disabled#resetBtn{
+        background-color: $neutral-gray;
+    }
+    
 }
+
+
+
 
 
 
@@ -262,8 +288,8 @@ input#numberPeople{
         height:400px;
     }
 
-    #reset{
-        margin-top:7rem;
+    input#resetBtn{
+        margin-top:5rem;
     }
 
     #selectTip{

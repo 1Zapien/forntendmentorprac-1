@@ -22,7 +22,7 @@
 
       <div id="billForm">
           <form role="form" class= "split" id="fillForm">
-            <label for="bill" >Bill</label><br>
+            <label for="bill" ><p>Bill</p><p class="alert"> Can't be Zero</p></label>
             <input type="number" id="bill" placeholder="0"><br>
             <div id="selectTip">
               <p>Select Tip %</p>
@@ -46,7 +46,7 @@
       
               <br>
           </div>
-          <label for="numberPeople" >Number of People</label><br>
+          <label for="numberPeople" ><p>Number of People </p><p class="alert"> Can't be Zero</p></label> 
           <input type="number" id="numberPeople" placeholder="0"> 
         </form>
           
@@ -71,7 +71,7 @@
               </div>
             </div>
             
-            <input type="reset" id="reset" form="fillForm"></input>
+            <input type="reset" id="resetBtn" form="fillForm" disabled></input>
           </div>
         </div>
       
