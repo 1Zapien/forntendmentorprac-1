@@ -151,7 +151,7 @@ input#numberPeople {
   color: #00494d;
 }
 
-label {
+.titles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,11 +161,7 @@ label {
           justify-content: space-between;
 }
 
-label p {
-  display: inline-block;
-}
-
-label p + .alert {
+.titles .alert {
   color: red;
   visibility: hidden;
 }

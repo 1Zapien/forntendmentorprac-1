@@ -80,9 +80,9 @@ let Update = ()=>{
     let persons = parseInt(people.value);
 
 
-    if(!persons  || persons == 0 ){
+    if(!persons  || persons == 0 || price < 0 ){
             alert[1].style.visibility = "visible";
-    }else if (!price || price < 0){
+        }else if (!price || price < 0){
             alert[0].style.visibility = "visible";
 
  
@@ -101,7 +101,7 @@ let Update = ()=>{
         totalEach = ((price*percent)+price)/persons;
         tipTotal.textContent = currencyRound(tipAmount)
         eachTotal.textContent = currencyRound(totalEach);
-        document. getElementById("resetBtn"). disabled = false;
+        reset.disabled = false;
 
     }
     
@@ -113,9 +113,9 @@ let Update = ()=>{
 reset.addEventListener('click', ()=>{
     tipTotal.textContent =  "$0.00";
     eachTotal.textContent =  "$0.00";
+    reset.disabled = true;
     alert[1].style.visibility = "hidden";
     alert[0].style.visibility = "hidden";
-    document. getElementById("reset"). disabled = true;
    
 });
 

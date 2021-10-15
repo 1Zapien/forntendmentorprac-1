@@ -175,19 +175,19 @@ input#numberPeople{
 }
 
 
-label{
+
+.titles{
     display: flex;
     width: 90%;
     justify-content: space-between;
-    p{
-        display: inline-block;
-
-        + .alert{
-            color: red;
-            visibility: hidden;
-         }
-
+    label{
     }
+    .alert{
+        color: red;
+        visibility: hidden;
+    }
+    
+
 }
 
 
